@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 from common import PATH
-from random import choice, randint
+from random import choice, randint, shuffle
 
 # 随机数范围
 targetRangeBegin = 51
@@ -66,6 +66,8 @@ def getData():
             'data': item.get('difficult')
         }
         serializeData.append(_data)
+    
+    shuffle(serializeData)
 
     return serializeData
 
