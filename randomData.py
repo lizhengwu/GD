@@ -73,4 +73,3 @@ def getData():
 if __name__ == "__main__":
     data = getData()
     print(data)
-    print(len(data))
