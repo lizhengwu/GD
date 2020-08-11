@@ -39,6 +39,9 @@ class MainDialogImgBW(QMainWindow, ui.Ui_MainWindow):
         self.curStep = 0
         self.pathData = getData()
 
+        self.color_list = ['lightblue', 'orange', 'g', 'r', 'purple', 'brown', 'pink', 'gray', 'yellow', 'aqua',
+                           'lightskyblue']
+
         self.pushButton.clicked.connect(self.nextClick)
         # self.initUI()
 
@@ -46,37 +49,18 @@ class MainDialogImgBW(QMainWindow, ui.Ui_MainWindow):
         # self.drawBar()
         # self.drawPie()
 
-    def drawBar(self, x, y):
+    def drawBar(self, x, y, color):
         F = MyFigure(width=3, height=3, dpi=100)
-
-        # x = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-        # y = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-        name_list = ['Admitted', 'Call Closed', 'Discharged', 'Emergency dentist', 'MIU',
-                     'Not picked up in an ambulance', 'OOH', 'Out-patient clinic', 'Seen by A&E doctor']
-        x2 = ['Admitted']
-        y2 = [9 * 1.2]
-
-        F.axes.bar(x, y)
-        F.axes.bar(x2, y2)
-        # F.axes.legend(name_list, loc='best')
+        F.axes.barh(x, y, color=color)
         F.fig.suptitle("image")
 
         self.gridlayout.addWidget(F, 0, 1)
 
-    def drawPie(self):
+    def drawPie(self, x, y):
         F1 = MyFigure(width=4, height=4, dpi=100)
         F1.fig.suptitle("Figuer_2")
-        # F1.axes = F1.fig.add_subplot(111)
 
-        y = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-        name_list = ['Admitted', 'Call Closed', 'Discharged', 'Emergency dentist', 'MIU',
-                     'Not picked up in an ambulance', 'OOH', 'Out-patient clinic', 'Seen by A&E doctor']
-        x2 = ['Admitted']
-        y2 = [9 * 1.2]
-
-        F1.axes.pie(y, labels=name_list)
+        F1.axes.pie(y, labels=x)
         # F.axes.legend(name_list, loc='best')
 
         # F1.axes2 = F1.fig.add_subplot(222)
@@ -109,10 +93,10 @@ class MainDialogImgBW(QMainWindow, ui.Ui_MainWindow):
             self.textBrowser.setText(self.pathData[self.curStep].get('target_name'))
             self.textBrowser_2.setText(str(self.pathData[self.curStep].get('target_value')))
             self.textBrowser_3.setText(str(self.pathData[self.curStep].get('data')))
-
-            # self.label_4.setText(str(self.pathData[self.curStep].get('data')))
             self.label_5.setText("题目类型：" + self.pathData[self.curStep].get('data_type'))
-            # self.label_5.setText("题目编号：" + str(self.curStep + 1))
+
+            image_type = self.pathData[self.curStep].get("image_type")
+            color = self.pathData[self.curStep].get("color")
 
             x = []
             y = []
@@ -124,11 +108,18 @@ class MainDialogImgBW(QMainWindow, ui.Ui_MainWindow):
 
                 y.append(value)
 
-            self.drawBar(x, y)
+            # self.drawPie(x, y)
+            self.draw(image_type, color, x, y)
             if self.curStep == 11:
                 self.nextBtn.setText("OK")
         else:
             print('提交答案')
+
+    def draw(self, image_type, color, x, y):
+        if image_type == "bar" and color == 'color':
+            self.drawBar(x, y, self.color_list)
+        else:
+            self.drawBar(x, y)
 
 
 if __name__ == "__main__":
