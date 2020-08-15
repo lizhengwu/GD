@@ -44,8 +44,9 @@ class MainDialogImgBW(QMainWindow, ui.Ui_MainWindow):
         self.gridlayout = QGridLayout(self.groupBox)
 
         # 颜色标签
-        self.color_list = ['lightblue', 'orange', 'g', 'r', 'purple', 'brown', 'pink', 'gray', 'yellow', 'aqua',
-                           'lightskyblue']
+        self.color_list = ['#88CCEE', '#CC6677', '#DDCC77', '#117733', '#332288', '#AA4499', '#44AA99', '#999933',
+                           '#661100', '#6699CC',
+                           '#888888']
 
         # 当前题
         self.curStep = 0
@@ -110,9 +111,10 @@ class MainDialogImgBW(QMainWindow, ui.Ui_MainWindow):
         # F1.axes.pie(y, labels=x)
         # self.gridlayout.addWidget(F1, 0, 1)
         plt.figure(figsize=(12, 8), dpi=100)
-        plt.pie(y, labels=None)
-        plt.tight_layout()
+        plt.pie(y, labels=None , colors = self.color_list)
+        plt.legend(x, loc="best", fontsize=10, bbox_to_anchor=(0.1, 1))
         plt.show()
+        plt.tight_layout()
 
     # 下一题
     def nextClick(self):
