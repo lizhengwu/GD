@@ -19,6 +19,7 @@ from PyQt5 import QtWidgets, QtCore, QtGui
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
+import json
 
 
 # 创建一个matplotlib图形绘制类
@@ -41,7 +42,7 @@ class MainDialogImgBW(QMainWindow, ui.Ui_MainWindow):
 
         # 第六步：在GUI的groupBox中创建一个布局，用于添加MyFigure类的实例（即图形）后其他部件。
         # 继承容器groupBox
-        self.gridlayout = QGridLayout(self.groupBox)
+        # self.gridlayout = QGridLayout(self.groupBox)
 
         # 颜色标签
         self.color_list = ['#88CCEE', '#CC6677', '#DDCC77', '#117733', '#332288', '#AA4499', '#44AA99', '#999933',
@@ -56,7 +57,12 @@ class MainDialogImgBW(QMainWindow, ui.Ui_MainWindow):
         self.answerData = []
 
         # 初始化
-        self.lastTime = 0
+        self.lastTime = datetime.now()
+        self.last_image_type = ''
+        self.last_color = ''
+        self.last_target_name = ''
+        self.last_target_value = ''
+        self.last_data = {}
 
         # 添加答案集合
         self.comboBox.addItems(PATH)
@@ -66,6 +72,7 @@ class MainDialogImgBW(QMainWindow, ui.Ui_MainWindow):
         # self.comboBox.actionEvent(self.answerAction())
 
         self.pushButton.clicked.connect(self.nextClick)
+        self.pushButton_2.clicked.connect(self.start)
 
         # 第五步：定义MyFigure类的一个实例
         # self.drawBar()
@@ -111,13 +118,55 @@ class MainDialogImgBW(QMainWindow, ui.Ui_MainWindow):
         # F1.axes.pie(y, labels=x)
         # self.gridlayout.addWidget(F1, 0, 1)
         plt.figure(figsize=(12, 8), dpi=100)
-        plt.pie(y, labels=None , colors = self.color_list)
+        plt.pie(y, labels=None, colors=self.color_list)
         plt.legend(x, loc="best", fontsize=10, bbox_to_anchor=(0.1, 1))
         plt.show()
         plt.tight_layout()
 
+    def start(self):
+        if self.curStep > 0:
+            tkinter.messagebox.showinfo("提示", "已经开始答题了")
+            return
+
+        # 初始化
+        self.lastTime = datetime.now()
+        self.last_image_type = self.pathData[self.curStep].get("image_type")
+        self.last_color = self.pathData[self.curStep].get("color")
+        self.last_target_name = self.pathData[self.curStep].get("target_name")
+        self.last_target_value = self.pathData[self.curStep].get("target_value")
+        self.last_data = self.pathData[self.curStep]
+
+        image_type = self.pathData[self.curStep].get("image_type")
+        color = self.pathData[self.curStep].get("color")
+
+        x = []
+        y = []
+
+        for item in self.pathData[self.curStep].get("data"):
+            name = item.get("name")
+            value = item.get("value")
+            x.append(name)
+            y.append(value)
+
+        # self.drawPie(x, y)
+        self.draw(image_type, color, x, y)
+
+        self.comboBox.clear()
+        self.comboBox.clearEditText()
+
+        # 添加答案集合
+        self.comboBox.addItems(PATH)
+        self.comboBox.setCurrentIndex(-1)
+        self.comboBox.setCurrentText('')
+
+        self.curStep += 1
+
     # 下一题
     def nextClick(self):
+
+        if self.curStep == 0:
+            tkinter.messagebox.showinfo("提示", "请点击开始")
+            return
 
         # 校验是否选择答案
         if self.comboBox.currentIndex() == -1 and len(self.comboBox.currentText()) == 0:
@@ -125,18 +174,32 @@ class MainDialogImgBW(QMainWindow, ui.Ui_MainWindow):
             return
 
         last_time = self.lastTime
-        now = datetime.now().second
-        duration = now - last_time
+        now = datetime.now()
+        duration = (now - last_time).seconds
+
+        select = self.comboBox.currentText()
+        answer = {
+            'duration': duration,
+            'customer_select': select,
+            'last_target_name': self.last_target_name,
+            'last_target_value': self.last_target_value,
+            'last_image_type': self.last_image_type,
+            'last_color': self.last_color,
+            'last_data': self.last_data
+        }
+        self.answerData.append(answer)
+
         # _translate = QCoreApplication.translate
 
-        if self.curStep < len(self.pathData) - 1:
+        if self.curStep < len(self.pathData):
             # self.pushButton_2.setVisible(True)
-            self.curStep += 1
 
-            # self.textBrowser.setText(self.pathData[self.curStep].get('target_name'))
-            # self.textBrowser_2.setText(str(self.pathData[self.curStep].get('target_value')))
-            # self.textBrowser_3.setText(str(self.pathData[self.curStep].get('data')))
-            # self.label_5.setText("题目类型：" + self.pathData[self.curStep].get('data_type'))
+            self.lastTime = datetime.now()
+            self.last_image_type = self.pathData[self.curStep].get("image_type")
+            self.last_color = self.pathData[self.curStep].get("color")
+            self.last_target_name = self.pathData[self.curStep].get("target_name")
+            self.last_target_value = self.pathData[self.curStep].get("target_value")
+            self.last_data = self.pathData[self.curStep]
 
             image_type = self.pathData[self.curStep].get("image_type")
             color = self.pathData[self.curStep].get("color")
@@ -151,24 +214,31 @@ class MainDialogImgBW(QMainWindow, ui.Ui_MainWindow):
 
                 y.append(value)
 
+            self.curStep += 1
+
             # self.drawPie(x, y)
             self.draw(image_type, color, x, y)
 
+            # 添加答案集合
             self.comboBox.clear()
             self.comboBox.clearEditText()
-
-            # 添加答案集合
             self.comboBox.addItems(PATH)
             self.comboBox.setCurrentIndex(-1)
             self.comboBox.setCurrentText('')
 
             # self.comboBox.clear()
-            if self.curStep == 11:
-                self.nextBtn.setText("submit")
+            # if self.curStep == self.pathData.__len__():
+            #     self.nextBtn.setText("submit")
         else:
-            print('提交答案')
+            tkinter.messagebox.askyesno("提示", "辛苦了，答完了")
+            answerData = json.dumps(self.answerData)
+            txt = "./answer" + str(datetime.now()) + ".txt"
+            file = open(txt, 'w')
+            file.write(answerData)
+            file.close()
 
-    # 画图
+            # 画图
+
     def draw(self, image_type, color, x, y):
         if image_type == "bar":
             if color == 'color':
