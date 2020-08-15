@@ -4,8 +4,13 @@ from PyQt5.QtWidgets import *
 import sys
 import numpy as np
 import UI as ui
-
+from common import PATH
 import matplotlib
+
+# 弹框
+import tkinter.messagebox
+from tkinter import *
+from datetime import datetime
 
 matplotlib.use("Qt5Agg")  # 声明使用QT5
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
@@ -36,19 +41,34 @@ class MainDialogImgBW(QMainWindow, ui.Ui_MainWindow):
         # 继承容器groupBox
         self.gridlayout = QGridLayout(self.groupBox)
 
-        self.curStep = 0
-        self.pathData = getData()
-
+        # 颜色标签
         self.color_list = ['lightblue', 'orange', 'g', 'r', 'purple', 'brown', 'pink', 'gray', 'yellow', 'aqua',
                            'lightskyblue']
 
+        # 当前题
+        self.curStep = 0
+        # 路径数据
+        self.pathData = getData()
+        # 答案集合
+        self.answerData = []
+
+        # 初始化
+        self.lastTime = 0
+
+        # 添加答案集合
+        self.comboBox.addItems(PATH)
+        # 初始化什么也不选
+        self.comboBox.setCurrentIndex(-1)
+        # # 答案选择触发事件
+        # self.comboBox.actionEvent(self.answerAction())
+
         self.pushButton.clicked.connect(self.nextClick)
-        # self.initUI()
 
         # 第五步：定义MyFigure类的一个实例
         # self.drawBar()
         # self.drawPie()
 
+    # 横图
     def drawBar(self, x, y, color):
         F = MyFigure(width=3, height=3, dpi=100)
         F.axes.barh(x, y, color=color)
@@ -56,6 +76,15 @@ class MainDialogImgBW(QMainWindow, ui.Ui_MainWindow):
 
         self.gridlayout.addWidget(F, 0, 1)
 
+    # 竖图
+    def drawColumn(self, x, y, color):
+        F = MyFigure(width=3, height=3, dpi=100)
+        F.axes.bar(x, y, color=color)
+        F.fig.suptitle("image")
+
+        self.gridlayout.addWidget(F, 0, 1)
+
+    # 饼图
     def drawPie(self, x, y):
         F1 = MyFigure(width=4, height=4, dpi=100)
         F1.fig.suptitle("Figuer_2")
@@ -80,11 +109,17 @@ class MainDialogImgBW(QMainWindow, ui.Ui_MainWindow):
         # F1.axes4.plot(x, np.sin(x), x, np.cos(x))
         # F1.axes4.set_title("sincos")
 
-        self.gridlayout.addWidget(F1, 0, 2)
+        self.gridlayout.addWidget(F1, 0, 1)
 
     # 下一题
     def nextClick(self):
-        _translate = QCoreApplication.translate
+
+        # 校验是否选择答案
+        if self.comboBox.currentIndex() == -1 and len(self.comboBox.currentText()) == 0:
+            tkinter.messagebox.showinfo("提示", "咋回事？不选答案哦？")
+            return
+
+        # _translate = QCoreApplication.translate
 
         if self.curStep < len(self.pathData) - 1:
             self.pushButton_2.setVisible(True)
@@ -110,21 +145,44 @@ class MainDialogImgBW(QMainWindow, ui.Ui_MainWindow):
 
             # self.drawPie(x, y)
             self.draw(image_type, color, x, y)
+
+            self.comboBox.setCurrentIndex(-1)
+            self.comboBox.setCurrentText('')
+
+            # self.comboBox.clear()
             if self.curStep == 11:
-                self.nextBtn.setText("OK")
+                self.nextBtn.setText("submit")
         else:
             print('提交答案')
 
+    # 画图
     def draw(self, image_type, color, x, y):
-        if image_type == "bar" and color == 'color':
-            self.drawBar(x, y, self.color_list)
-        else:
-            self.drawBar(x, y)
+        if image_type == "bar":
+            if color == 'color':
+                self.drawBar(x, y, self.color_list)
+            else:
+                self.drawBar(x, y, None)
+        if image_type == "column":
+            if color == 'color':
+                self.drawColumn(x, y, self.color_list)
+            else:
+                self.drawColumn(x, y, None)
+        if image_type == "pie":
+            self.drawPie(x, y)
 
 
 if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    main = MainDialogImgBW()
-    main.show()
+
+    tk = Tk()
+    tk.withdraw()
+
+    askyesno = tkinter.messagebox.askyesno("草拟吗", "福俺哥可和豆腐干安科技感发动机号挨个打泛华金控轧空京东方感康大家开发爱国海景房kg阿道夫")
+    if askyesno:
+        app = QApplication(sys.argv)
+        main = MainDialogImgBW()
+        main.show()
+        sys.exit(app.exec_())
+    else:
+        tkinter.messagebox.showinfo("滚", "滚")
+        sys.exc_info()
     # app.installEventFilter(main)
-    sys.exit(app.exec_())
