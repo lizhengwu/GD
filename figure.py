@@ -1,8 +1,5 @@
-from PyQt5.QtCore import *
-from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
-import sys
-import numpy as np
+
 import UI as ui
 from common import PATH
 import matplotlib
@@ -17,6 +14,11 @@ from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
 import matplotlib.pyplot as plt
 from randomData import getData
+
+from PyQt5 import QtWidgets, QtCore, QtGui
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
+from PyQt5.QtCore import *
 
 
 # 创建一个matplotlib图形绘制类
@@ -70,46 +72,47 @@ class MainDialogImgBW(QMainWindow, ui.Ui_MainWindow):
 
     # 横图
     def drawBar(self, x, y, color):
-        F = MyFigure(width=3, height=3, dpi=100)
-        F.axes.barh(x, y, color=color)
-        F.fig.suptitle("image")
-
-        self.gridlayout.addWidget(F, 0, 1)
+        # F = MyFigure(width=12, height=4, dpi=100)
+        # F.axes.barh(x, y, color=color)
+        # F.fig.suptitle("image")
+        # self.gridlayout.addWidget(F, 0, 1)
+        plt.figure(figsize=(12, 8), dpi=100)
+        plt.barh(x, y, color=color)
+        plt.yticks(x, None, rotation=45, fontsize=8)
+        plt.tight_layout()
+        plt.show()
 
     # 竖图
     def drawColumn(self, x, y, color):
-        F = MyFigure(width=3, height=3, dpi=100)
-        F.axes.bar(x, y, color=color)
-        F.fig.suptitle("image")
+        # F = MyFigure(width=12, height=4, dpi=100)
+        # F.axes.bar(x, y, color=color, width=0.4)
+        # F.fig.suptitle("image")
+        #
+        # self.gridlayout.addWidget(F, 0, 1)
+        #
+        # self.gridlayout.addWidget(plt.figure(), 0, 1)
+        # plt.savefig('./image.png')
 
-        self.gridlayout.addWidget(F, 0, 1)
+        plt.figure(figsize=(12, 8), dpi=100)
+        plt.bar(x, y, color=color)
+        plt.xticks(x, None, rotation=45, fontsize=8)
+        plt.tight_layout()
+        plt.show()
+
+        # jpg = QtGui.QPixmap("./image.png").scaled(self.label_2.width(), self.label_2.height())
+        # self.label_2.setPixmap(jpg)
+        # self.show()
 
     # 饼图
     def drawPie(self, x, y):
-        F1 = MyFigure(width=4, height=4, dpi=100)
-        F1.fig.suptitle("Figuer_2")
-
-        F1.axes.pie(y, labels=x)
-        # F.axes.legend(name_list, loc='best')
-
-        # F1.axes2 = F1.fig.add_subplot(222)
-        #
-        # ## 调用figure下面的add_subplot方法，类似于matplotlib.pyplot下面的subplot方法
-        # x = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-        # y = [23, 21, 32, 13, 3, 132, 13, 3, 1]
-        # F1.axes2.plot(x, y)
-        # F1.axes2.set_title("line")
-        # # 散点图
-        # F1.axes3 = F1.fig.add_subplot(223)
-        # F1.axes3.scatter(np.random.rand(20), np.random.rand(20))
-        # F1.axes3.set_title("scatter")
-        # # 折线图
-        # F1.axes4 = F1.fig.add_subplot(224)
-        # x = np.arange(0, 5, 0.1)
-        # F1.axes4.plot(x, np.sin(x), x, np.cos(x))
-        # F1.axes4.set_title("sincos")
-
-        self.gridlayout.addWidget(F1, 0, 1)
+        # F1 = MyFigure(width=12, height=4, dpi=100)
+        # F1.fig.suptitle("Figuer_2")
+        # F1.axes.pie(y, labels=x)
+        # self.gridlayout.addWidget(F1, 0, 1)
+        plt.figure(figsize=(12, 8), dpi=100)
+        plt.pie(y, labels=None)
+        plt.tight_layout()
+        plt.show()
 
     # 下一题
     def nextClick(self):
@@ -119,16 +122,19 @@ class MainDialogImgBW(QMainWindow, ui.Ui_MainWindow):
             tkinter.messagebox.showinfo("提示", "咋回事？不选答案哦？")
             return
 
+        last_time = self.lastTime
+        now = datetime.now().second
+        duration = now - last_time
         # _translate = QCoreApplication.translate
 
         if self.curStep < len(self.pathData) - 1:
-            self.pushButton_2.setVisible(True)
+            # self.pushButton_2.setVisible(True)
             self.curStep += 1
 
-            self.textBrowser.setText(self.pathData[self.curStep].get('target_name'))
-            self.textBrowser_2.setText(str(self.pathData[self.curStep].get('target_value')))
-            self.textBrowser_3.setText(str(self.pathData[self.curStep].get('data')))
-            self.label_5.setText("题目类型：" + self.pathData[self.curStep].get('data_type'))
+            # self.textBrowser.setText(self.pathData[self.curStep].get('target_name'))
+            # self.textBrowser_2.setText(str(self.pathData[self.curStep].get('target_value')))
+            # self.textBrowser_3.setText(str(self.pathData[self.curStep].get('data')))
+            # self.label_5.setText("题目类型：" + self.pathData[self.curStep].get('data_type'))
 
             image_type = self.pathData[self.curStep].get("image_type")
             color = self.pathData[self.curStep].get("color")
@@ -146,6 +152,11 @@ class MainDialogImgBW(QMainWindow, ui.Ui_MainWindow):
             # self.drawPie(x, y)
             self.draw(image_type, color, x, y)
 
+            self.comboBox.clear()
+            self.comboBox.clearEditText()
+
+            # 添加答案集合
+            self.comboBox.addItems(PATH)
             self.comboBox.setCurrentIndex(-1)
             self.comboBox.setCurrentText('')
 
@@ -169,6 +180,11 @@ class MainDialogImgBW(QMainWindow, ui.Ui_MainWindow):
                 self.drawColumn(x, y, None)
         if image_type == "pie":
             self.drawPie(x, y)
+
+        # if color == 'color':
+        #     self.drawPie(x, y)
+        # else:
+        #     self.drawPie(x, y)
 
 
 if __name__ == "__main__":
