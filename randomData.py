@@ -14,7 +14,7 @@ targetMaxEnd2 = 1200
 
 def getRandomTargetData():
     data = []
-    for _ in range(10):
+    for _ in range(12):
         targetName = choice(PATH)
         if _ % 2 == 0:
             targetValue = targetMaxEnd1
@@ -80,6 +80,12 @@ def typeAndColor(index, data):
     if index == 9:
         data['image_type'] = 'pie'
         data['color'] = 'color'
+    if index == 10:
+        data['image_type'] = 'pie'
+        data['color'] = 'none'
+    if index == 11:
+        data['image_type'] = 'pie'
+        data['color'] = 'none'
 
 
 def getData():

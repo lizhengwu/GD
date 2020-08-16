@@ -48,6 +48,9 @@ class MainDialogImgBW(QMainWindow, ui.Ui_MainWindow):
         self.color_list = ['#88CCEE', '#CC6677', '#DDCC77', '#117733', '#332288', '#AA4499', '#44AA99', '#999933',
                            '#661100', '#6699CC',
                            '#888888']
+        self.color_list2 = ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF',
+                            '#FFFFFF', '#FFFFFF',
+                            '#FFFFFF']
 
         # 当前题
         self.curStep = 0
@@ -85,8 +88,15 @@ class MainDialogImgBW(QMainWindow, ui.Ui_MainWindow):
         # F.fig.suptitle("image")
         # self.gridlayout.addWidget(F, 0, 1)
         plt.figure(figsize=(12, 8), dpi=100)
-        plt.barh(x, y, color=color)
-        plt.yticks(x, None, rotation=45, fontsize=8)
+
+        if color is None:
+            plt.barh(x, y, color=color)
+            plt.yticks(x, None, rotation=45, fontsize=8)
+        else:
+            for i in range(11):
+                plt.barh(x[i], y[i], color=self.color_list[i])
+                plt.yticks([], None, rotation=45, fontsize=8)
+                plt.legend(x, ncol=2, loc="best", fontsize=10, bbox_to_anchor=(1, 1))
         plt.tight_layout()
         plt.show()
 
@@ -102,8 +112,16 @@ class MainDialogImgBW(QMainWindow, ui.Ui_MainWindow):
         # plt.savefig('./image.png')
 
         plt.figure(figsize=(12, 8), dpi=100)
-        plt.bar(x, y, color=color)
-        plt.xticks(x, None, rotation=45, fontsize=8)
+
+        if color is None:
+            plt.bar(x, y)
+            plt.xticks(x, None, rotation=45, fontsize=8)
+        else:
+            for i in range(11):
+                plt.bar(x[i], y[i], color=self.color_list[i])
+                plt.xticks([], None, rotation=45, fontsize=8)
+                plt.legend(x, ncol=2, loc="best", fontsize=10, bbox_to_anchor=(1, 1))
+
         plt.tight_layout()
         plt.show()
 
@@ -120,6 +138,20 @@ class MainDialogImgBW(QMainWindow, ui.Ui_MainWindow):
         plt.figure(figsize=(12, 8), dpi=100)
         plt.pie(y, labels=None, colors=self.color_list)
         plt.legend(x, loc="best", fontsize=10, bbox_to_anchor=(0.1, 1))
+        plt.show()
+        plt.tight_layout()
+
+    # 饼图
+    def drawPie2(self, x, y):
+        # F1 = MyFigure(width=12, height=4, dpi=100)
+        # F1.fig.suptitle("Figuer_2")
+        # F1.axes.pie(y, labels=x)
+        # self.gridlayout.addWidget(F1, 0, 1)
+        # plt.rcParams['lines.linewidth'] = 2
+        # plt.rcParams['patch.edgecolor'] = '#88CCEE'
+        plt.figure(figsize=(12, 8), dpi=100)
+        plt.pie(y, labels=x, colors=self.color_list2, wedgeprops={'linewidth': 3, "edgecolor": "black"})
+        # plt.legend(x, loc="best", fontsize=10, bbox_to_anchor=(0.1, 1))
         plt.show()
         plt.tight_layout()
 
@@ -251,12 +283,13 @@ class MainDialogImgBW(QMainWindow, ui.Ui_MainWindow):
             else:
                 self.drawColumn(x, y, None)
         if image_type == "pie":
-            self.drawPie(x, y)
+            if color == "color":
+                self.drawPie(x, y)
+            else:
+                self.drawPie2(x, y)
 
-        # if color == 'color':
-        #     self.drawPie(x, y)
-        # else:
-        #     self.drawPie(x, y)
+        # if image_type == "column":
+        # self.drawBar(x, y, self.color_list)
 
 
 if __name__ == "__main__":
