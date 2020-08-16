@@ -207,7 +207,7 @@ class MainDialogImgBW(QMainWindow, ui.Ui_MainWindow):
 
         last_time = self.lastTime
         now = datetime.now()
-        duration = (now - last_time).seconds
+        duration = (now - last_time).microseconds
 
         select = self.comboBox.currentText()
         answer = {
