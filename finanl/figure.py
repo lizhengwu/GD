@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import *
 
 import UI as ui
-from common import PATH
+from common import *
 import matplotlib
 
 import tkinter.messagebox
@@ -19,16 +19,16 @@ matplotlib.use("Qt5Agg")  # Declare the use of QT5
 
 
 # Create a matplotlib graphics drawing class
-class MyFigure(FigureCanvas):
-    # creat a Figure
-    def __init__(self, width, height, dpi):
-        self.fig = Figure(figsize=(width, height), dpi=dpi)
-        # Activate the Figure window in the parent class
-        super(MyFigure, self).__init__(self.fig)
-        # Create a subgraph for drawing graphics. 111 represents the subgraph number.
-        self.axes = self.fig.add_subplot(111)
+# class MyFigure(FigureCanvas):
+#     # create a Figure
+#     def __init__(self, width, height, dpi):
+#         self.fig = Figure(figsize=(width, height), dpi=dpi)
+#         # Activate the Figure window in the parent class
+#         super(MyFigure, self).__init__(self.fig)
+#         # Create a subgraph for drawing graphics. 111 represents the subgraph number.
+#         self.axes = self.fig.add_subplot(111)
 
-
+#
 class MainDialogImgBW(QMainWindow, ui.Ui_MainWindow):
     def __init__(self):
         super(MainDialogImgBW, self).__init__()
@@ -36,11 +36,12 @@ class MainDialogImgBW(QMainWindow, ui.Ui_MainWindow):
         self.setWindowTitle("Main Window")
         self.setMinimumSize(0, 0)
 
-        # current trail
+        # init params
+        # init current trail
         self.curStep = 0
         # paths data
         self.pathData = getData()
-        # answer
+        # answer result
         self.answerData = []
 
         # initialization
@@ -71,7 +72,7 @@ class MainDialogImgBW(QMainWindow, ui.Ui_MainWindow):
         plt.title('The cost of patients choosing different pathways')
         if color is None:
             plt.barh(x, y, color=color)
-            plt.yticks(x, None,  fontsize=8)
+            plt.yticks(x, None, fontsize=8)
         else:
             for i in range(11):
                 plt.barh(x[i], y[i], color=self.color_list[i])

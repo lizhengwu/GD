@@ -1,0 +1,501 @@
+Patient,Gender,Age,Condition,outcome,Ambulance,Assessed
+0,Female,65+,Cardiac conditions,Not picked up by an ambulance,3,114
+1,Male,20-64,Unknown,Call closed,7,112
+2,Female,20-64,Cardiac conditions,Out-patient clinic,10,92
+3,Male,5-19,Dislocation/fracture/joint injury/amputation,WIC,8,244
+4,Female,0-4,Falls,Seen by A&E doctor,14,160
+5,Male,65+,Dislocation/fracture/joint injury/amputation,OOH,5,20
+6,Male,0-4,Respiratory conditions,Out-patient clinic,10,150
+7,Male,65+,Collapse,OOH,14,29
+8,Male,5-19,Unknown,MIU,5,160
+9,Female,20-64,Respiratory conditions,OOH,7,267
+10,Female,0-4,Collapse,Call closed,0,101
+11,Female,0-4,Respiratory conditions,WIC,3,30
+12,Male,20-64,Dislocation/fracture/joint injury/amputation,WIC,18,230
+13,Female,5-19,Dislocation/fracture/joint injury/amputation,Seen by A&E doctor,4,111
+14,Male,5-19,Falls,Not picked up by an ambulance,20,125
+15,Male,0-4,Respiratory conditions,MIU,6,164
+16,Female,65+,Unknown,Seen by A&E doctor,8,324
+17,Male,65+,Central Nervous System conditions,Out-patient clinic,18,87
+18,Female,20-64,Central Nervous System conditions,Call closed,1,176
+19,Female,20-64,Unknown,MIU,10,224
+20,Female,5-19,Unknown,Emergency Dentist,13,251
+21,Female,0-4,Gastrointestinal conditions,WIC,18,127
+22,Male,65+,Respiratory conditions,Out-patient clinic,6,148
+23,Male,5-19,Dislocation/fracture/joint injury/amputation,Spoke to a primary care service,4,297
+24,Male,5-19,Collapse,Discharged,14,131
+25,Female,20-64,Falls,Out-patient clinic,11,95
+26,Male,5-19,Respiratory conditions,MIU,6,193
+27,Male,5-19,Gastrointestinal conditions,Out-patient clinic,10,70
+28,Male,20-64,Respiratory conditions,Emergency Dentist,9,252
+29,Female,20-64,Respiratory conditions,WIC,5,140
+30,Female,5-19,Collapse,Emergency Dentist,10,322
+31,Female,5-19,Cardiac conditions,Out-patient clinic,9,197
+32,Male,0-4,Unknown,Call closed,2,243
+33,Female,0-4,Dislocation/fracture/joint injury/amputation,Not picked up by an ambulance,16,249
+34,Male,0-4,Dislocation/fracture/joint injury/amputation,Out-patient clinic,13,315
+35,Male,5-19,Cardiac conditions,Spoke to a primary care service,13,22
+36,Male,0-4,Respiratory conditions,OOH,17,102
+37,Female,20-64,Respiratory conditions,Seen by A&E doctor,5,26
+38,Female,5-19,Falls,Spoke to a primary care service,18,139
+39,Male,20-64,Gastrointestinal conditions,MIU,11,110
+40,Male,0-4,Cardiac conditions,Seen by A&E doctor,8,329
+41,Male,65+,Collapse,Emergency Dentist,16,259
+42,Female,0-4,Dislocation/fracture/joint injury/amputation,Out-patient clinic,0,186
+43,Female,20-64,Cardiac conditions,OOH,15,333
+44,Male,0-4,Unknown,Discharged,21,26
+45,Female,20-64,Unknown,Call closed,2,181
+46,Female,20-64,Central Nervous System conditions,Call closed,10,178
+47,Male,5-19,Central Nervous System conditions,WIC,14,85
+48,Female,65+,Respiratory conditions,WIC,16,326
+49,Female,5-19,Falls,Admitted,3,77
+50,Male,0-4,Unknown,Seen by A&E doctor,2,152
+51,Male,20-64,Dislocation/fracture/joint injury/amputation,Spoke to a primary care service,4,200
+52,Male,5-19,Dislocation/fracture/joint injury/amputation,Emergency Dentist,3,193
+53,Male,65+,Collapse,Out-patient clinic,8,24
+54,Female,20-64,Central Nervous System conditions,Not picked up by an ambulance,9,62
+55,Male,65+,Central Nervous System conditions,Out-patient clinic,19,280
+56,Male,20-64,Dislocation/fracture/joint injury/amputation,Admitted,14,72
+57,Male,0-4,Respiratory conditions,Call closed,19,78
+58,Female,65+,Gastrointestinal conditions,Discharged,10,25
+59,Male,0-4,Gastrointestinal conditions,Spoke to a primary care service,21,26
+60,Female,20-64,Unknown,Out-patient clinic,8,110
+61,Male,5-19,Collapse,MIU,15,88
+62,Male,0-4,Cardiac conditions,Seen by A&E doctor,0,21
+63,Female,65+,Unknown,Out-patient clinic,13,59
+64,Male,5-19,Unknown,Out-patient clinic,5,210
+65,Female,20-64,Cardiac conditions,Spoke to a primary care service,10,52
+66,Male,0-4,Falls,Seen by A&E doctor,18,109
+67,Female,20-64,Collapse,OOH,2,73
+68,Male,0-4,Unknown,Admitted,18,329
+69,Female,0-4,Dislocation/fracture/joint injury/amputation,WIC,6,51
+70,Male,5-19,Falls,Seen by A&E doctor,19,13
+71,Female,5-19,Gastrointestinal conditions,Discharged,0,203
+72,Female,0-4,Unknown,MIU,3,221
+73,Female,65+,Central Nervous System conditions,Emergency Dentist,18,169
+74,Female,65+,Falls,WIC,11,307
+75,Female,20-64,Dislocation/fracture/joint injury/amputation,Admitted,20,214
+76,Female,5-19,Falls,Not picked up by an ambulance,18,255
+77,Male,20-64,Cardiac conditions,MIU,14,51
+78,Male,20-64,Unknown,WIC,20,218
+79,Female,20-64,Falls,Call closed,10,246
+80,Female,65+,Dislocation/fracture/joint injury/amputation,WIC,1,172
+81,Female,0-4,Cardiac conditions,Not picked up by an ambulance,12,37
+82,Female,65+,Central Nervous System conditions,Not picked up by an ambulance,7,47
+83,Female,20-64,Dislocation/fracture/joint injury/amputation,WIC,8,141
+84,Male,65+,Collapse,Not picked up by an ambulance,6,242
+85,Male,5-19,Gastrointestinal conditions,Call closed,17,105
+86,Male,0-4,Falls,WIC,19,264
+87,Male,0-4,Dislocation/fracture/joint injury/amputation,MIU,12,257
+88,Female,5-19,Central Nervous System conditions,Emergency Dentist,2,186
+89,Female,5-19,Respiratory conditions,Emergency Dentist,3,297
+90,Male,5-19,Central Nervous System conditions,Discharged,20,32
+91,Female,20-64,Gastrointestinal conditions,WIC,4,325
+92,Male,20-64,Unknown,Discharged,14,288
+93,Female,20-64,Central Nervous System conditions,Seen by A&E doctor,19,211
+94,Female,20-64,Unknown,Emergency Dentist,5,132
+95,Male,20-64,Respiratory conditions,Out-patient clinic,12,90
+96,Female,20-64,Cardiac conditions,Spoke to a primary care service,16,121
+97,Male,0-4,Falls,Call closed,14,140
+98,Female,0-4,Central Nervous System conditions,Seen by A&E doctor,7,17
+99,Female,5-19,Collapse,Admitted,1,292
+100,Male,20-64,Central Nervous System conditions,OOH,12,112
+101,Female,0-4,Unknown,Admitted,17,264
+102,Female,65+,Respiratory conditions,Seen by A&E doctor,2,306
+103,Female,20-64,Gastrointestinal conditions,Admitted,18,25
+104,Male,20-64,Unknown,MIU,18,231
+105,Male,65+,Cardiac conditions,OOH,14,160
+106,Female,20-64,Cardiac conditions,Emergency Dentist,0,230
+107,Female,5-19,Dislocation/fracture/joint injury/amputation,Discharged,4,77
+108,Female,65+,Central Nervous System conditions,WIC,12,204
+109,Female,5-19,Falls,Spoke to a primary care service,17,259
+110,Female,0-4,Dislocation/fracture/joint injury/amputation,Spoke to a primary care service,4,58
+111,Male,0-4,Respiratory conditions,Discharged,21,22
+112,Male,5-19,Falls,Call closed,3,195
+113,Male,0-4,Unknown,Out-patient clinic,0,207
+114,Female,5-19,Gastrointestinal conditions,Out-patient clinic,1,80
+115,Male,0-4,Unknown,Not picked up by an ambulance,21,54
+116,Male,0-4,Collapse,Seen by A&E doctor,15,29
+117,Female,5-19,Central Nervous System conditions,WIC,4,274
+118,Male,0-4,Gastrointestinal conditions,Admitted,19,181
+119,Male,5-19,Collapse,Call closed,21,44
+120,Female,5-19,Respiratory conditions,Not picked up by an ambulance,16,132
+121,Male,65+,Cardiac conditions,Admitted,15,299
+122,Female,65+,Collapse,Call closed,8,130
+123,Male,20-64,Collapse,OOH,11,242
+124,Male,0-4,Collapse,Seen by A&E doctor,13,250
+125,Female,5-19,Collapse,Seen by A&E doctor,7,182
+126,Male,0-4,Central Nervous System conditions,Discharged,11,307
+127,Female,0-4,Dislocation/fracture/joint injury/amputation,MIU,4,15
+128,Female,5-19,Central Nervous System conditions,Spoke to a primary care service,0,169
+129,Male,20-64,Unknown,Seen by A&E doctor,8,332
+130,Male,5-19,Collapse,Admitted,17,220
+131,Female,65+,Gastrointestinal conditions,Emergency Dentist,17,204
+132,Male,5-19,Respiratory conditions,MIU,9,106
+133,Male,0-4,Central Nervous System conditions,Out-patient clinic,7,43
+134,Female,0-4,Central Nervous System conditions,Spoke to a primary care service,14,97
+135,Female,0-4,Gastrointestinal conditions,Discharged,20,281
+136,Male,20-64,Gastrointestinal conditions,Spoke to a primary care service,13,114
+137,Female,5-19,Respiratory conditions,Discharged,5,120
+138,Male,5-19,Dislocation/fracture/joint injury/amputation,WIC,18,213
+139,Male,0-4,Falls,MIU,2,31
+140,Male,0-4,Respiratory conditions,WIC,8,34
+141,Male,0-4,Dislocation/fracture/joint injury/amputation,OOH,14,290
+142,Female,20-64,Cardiac conditions,Not picked up by an ambulance,4,73
+143,Female,65+,Collapse,MIU,1,106
+144,Male,65+,Collapse,Spoke to a primary care service,0,94
+145,Male,0-4,Cardiac conditions,MIU,13,36
+146,Male,5-19,Unknown,Admitted,6,225
+147,Male,5-19,Respiratory conditions,Discharged,1,257
+148,Male,5-19,Central Nervous System conditions,MIU,9,64
+149,Male,65+,Falls,Call closed,1,29
+150,Male,0-4,Cardiac conditions,Call closed,4,88
+151,Female,5-19,Cardiac conditions,Not picked up by an ambulance,10,161
+152,Female,5-19,Falls,Emergency Dentist,21,51
+153,Female,20-64,Cardiac conditions,Admitted,16,211
+154,Male,5-19,Falls,Emergency Dentist,4,290
+155,Male,20-64,Cardiac conditions,Admitted,0,186
+156,Female,5-19,Collapse,Not picked up by an ambulance,2,266
+157,Male,0-4,Dislocation/fracture/joint injury/amputation,Seen by A&E doctor,10,82
+158,Female,20-64,Respiratory conditions,Discharged,7,126
+159,Female,5-19,Dislocation/fracture/joint injury/amputation,Seen by A&E doctor,5,125
+160,Female,20-64,Cardiac conditions,MIU,7,27
+161,Female,5-19,Cardiac conditions,Spoke to a primary care service,3,29
+162,Female,65+,Unknown,Spoke to a primary care service,8,211
+163,Female,0-4,Unknown,Out-patient clinic,7,16
+164,Male,0-4,Unknown,Seen by A&E doctor,5,58
+165,Male,5-19,Gastrointestinal conditions,WIC,8,206
+166,Female,0-4,Gastrointestinal conditions,OOH,16,31
+167,Female,65+,Dislocation/fracture/joint injury/amputation,Out-patient clinic,13,86
+168,Female,0-4,Falls,MIU,13,208
+169,Female,0-4,Collapse,Discharged,10,29
+170,Male,0-4,Central Nervous System conditions,Seen by A&E doctor,5,30
+171,Female,20-64,Gastrointestinal conditions,Not picked up by an ambulance,18,50
+172,Female,0-4,Dislocation/fracture/joint injury/amputation,Seen by A&E doctor,5,51
+173,Male,0-4,Collapse,Call closed,0,3
+174,Male,20-64,Cardiac conditions,Not picked up by an ambulance,21,84
+175,Male,65+,Central Nervous System conditions,Admitted,13,186
+176,Male,0-4,Cardiac conditions,WIC,9,329
+177,Male,20-64,Respiratory conditions,Emergency Dentist,20,326
+178,Female,0-4,Collapse,Not picked up by an ambulance,3,58
+179,Female,5-19,Falls,Call closed,8,2
+180,Male,0-4,Cardiac conditions,Admitted,20,12
+181,Female,0-4,Collapse,Out-patient clinic,7,283
+182,Female,65+,Unknown,Admitted,0,6
+183,Female,5-19,Cardiac conditions,OOH,10,113
+184,Male,65+,Unknown,OOH,6,221
+185,Female,0-4,Collapse,Call closed,10,237
+186,Male,20-64,Respiratory conditions,Emergency Dentist,14,74
+187,Female,20-64,Gastrointestinal conditions,Emergency Dentist,4,275
+188,Female,0-4,Dislocation/fracture/joint injury/amputation,WIC,14,223
+189,Male,0-4,Central Nervous System conditions,Spoke to a primary care service,17,141
+190,Female,65+,Central Nervous System conditions,Discharged,17,85
+191,Male,65+,Respiratory conditions,MIU,3,138
+192,Female,0-4,Central Nervous System conditions,Discharged,11,138
+193,Male,20-64,Unknown,OOH,5,213
+194,Male,5-19,Cardiac conditions,Call closed,20,225
+195,Female,5-19,Cardiac conditions,MIU,16,319
+196,Female,20-64,Unknown,WIC,2,263
+197,Male,65+,Gastrointestinal conditions,MIU,0,9
+198,Female,65+,Gastrointestinal conditions,Spoke to a primary care service,17,322
+199,Female,65+,Unknown,Emergency Dentist,16,180
+200,Male,65+,Collapse,Discharged,17,304
+201,Female,20-64,Collapse,Spoke to a primary care service,14,308
+202,Male,5-19,Collapse,Call closed,2,14
+203,Female,5-19,Respiratory conditions,Out-patient clinic,6,203
+204,Male,65+,Falls,WIC,9,334
+205,Male,5-19,Respiratory conditions,Out-patient clinic,5,29
+206,Male,0-4,Falls,Emergency Dentist,0,131
+207,Male,20-64,Collapse,Not picked up by an ambulance,1,100
+208,Female,65+,Respiratory conditions,WIC,12,314
+209,Female,5-19,Collapse,Discharged,14,157
+210,Male,0-4,Gastrointestinal conditions,Emergency Dentist,0,160
+211,Male,0-4,Falls,Call closed,19,32
+212,Male,20-64,Central Nervous System conditions,WIC,3,22
+213,Female,5-19,Central Nervous System conditions,OOH,14,215
+214,Female,65+,Dislocation/fracture/joint injury/amputation,WIC,19,291
+215,Female,0-4,Gastrointestinal conditions,WIC,8,205
+216,Male,65+,Collapse,Seen by A&E doctor,2,8
+217,Female,5-19,Falls,Not picked up by an ambulance,13,325
+218,Female,5-19,Gastrointestinal conditions,Discharged,5,22
+219,Female,65+,Falls,Call closed,7,239
+220,Male,65+,Cardiac conditions,WIC,15,170
+221,Male,5-19,Respiratory conditions,Emergency Dentist,20,198
+222,Male,5-19,Dislocation/fracture/joint injury/amputation,Discharged,17,333
+223,Male,65+,Central Nervous System conditions,Out-patient clinic,12,84
+224,Male,20-64,Central Nervous System conditions,Spoke to a primary care service,0,61
+225,Male,0-4,Falls,OOH,5,299
+226,Male,5-19,Collapse,Not picked up by an ambulance,2,65
+227,Male,65+,Unknown,WIC,17,145
+228,Female,65+,Falls,Emergency Dentist,19,163
+229,Male,5-19,Falls,Not picked up by an ambulance,10,329
+230,Male,5-19,Central Nervous System conditions,WIC,5,24
+231,Male,20-64,Cardiac conditions,Seen by A&E doctor,2,2
+232,Male,5-19,Dislocation/fracture/joint injury/amputation,Admitted,8,161
+233,Male,0-4,Respiratory conditions,Discharged,17,156
+234,Female,0-4,Falls,WIC,6,17
+235,Male,20-64,Cardiac conditions,Spoke to a primary care service,14,114
+236,Female,20-64,Cardiac conditions,WIC,21,147
+237,Male,65+,Central Nervous System conditions,OOH,8,19
+238,Male,20-64,Cardiac conditions,MIU,20,167
+239,Female,20-64,Falls,Spoke to a primary care service,5,328
+240,Male,0-4,Falls,WIC,15,167
+241,Female,0-4,Central Nervous System conditions,WIC,6,253
+242,Female,0-4,Respiratory conditions,WIC,9,142
+243,Male,20-64,Gastrointestinal conditions,Out-patient clinic,18,217
+244,Male,0-4,Gastrointestinal conditions,Spoke to a primary care service,6,266
+245,Female,20-64,Unknown,WIC,15,23
+246,Male,20-64,Cardiac conditions,Not picked up by an ambulance,2,187
+247,Female,65+,Gastrointestinal conditions,Seen by A&E doctor,0,43
+248,Male,0-4,Unknown,Emergency Dentist,11,19
+249,Male,0-4,Respiratory conditions,Seen by A&E doctor,13,1
+250,Female,20-64,Central Nervous System conditions,OOH,4,299
+251,Male,5-19,Respiratory conditions,Spoke to a primary care service,16,57
+252,Female,65+,Gastrointestinal conditions,Out-patient clinic,4,135
+253,Female,65+,Unknown,Seen by A&E doctor,11,223
+254,Male,20-64,Central Nervous System conditions,MIU,1,307
+255,Male,20-64,Cardiac conditions,Spoke to a primary care service,21,84
+256,Female,20-64,Respiratory conditions,Discharged,17,92
+257,Female,65+,Dislocation/fracture/joint injury/amputation,Spoke to a primary care service,7,302
+258,Female,65+,Respiratory conditions,MIU,21,202
+259,Male,20-64,Falls,Spoke to a primary care service,8,82
+260,Female,0-4,Central Nervous System conditions,Emergency Dentist,16,100
+261,Male,65+,Dislocation/fracture/joint injury/amputation,Discharged,1,114
+262,Female,0-4,Central Nervous System conditions,Admitted,7,219
+263,Male,65+,Dislocation/fracture/joint injury/amputation,OOH,8,101
+264,Female,65+,Unknown,WIC,11,60
+265,Female,65+,Respiratory conditions,Discharged,18,327
+266,Male,0-4,Central Nervous System conditions,Spoke to a primary care service,15,125
+267,Male,20-64,Collapse,Discharged,13,138
+268,Male,20-64,Cardiac conditions,Call closed,19,44
+269,Female,0-4,Unknown,OOH,6,43
+270,Male,5-19,Respiratory conditions,Discharged,15,109
+271,Male,0-4,Collapse,Seen by A&E doctor,17,331
+272,Male,5-19,Respiratory conditions,Not picked up by an ambulance,5,218
+273,Male,20-64,Dislocation/fracture/joint injury/amputation,Spoke to a primary care service,18,37
+274,Male,65+,Respiratory conditions,Admitted,21,304
+275,Female,0-4,Cardiac conditions,MIU,16,203
+276,Female,0-4,Collapse,Seen by A&E doctor,5,168
+277,Male,20-64,Falls,Emergency Dentist,1,262
+278,Female,5-19,Unknown,Admitted,16,174
+279,Male,65+,Gastrointestinal conditions,Discharged,3,294
+280,Female,65+,Gastrointestinal conditions,WIC,5,79
+281,Male,5-19,Gastrointestinal conditions,Seen by A&E doctor,7,238
+282,Female,5-19,Respiratory conditions,Seen by A&E doctor,18,107
+283,Female,20-64,Collapse,WIC,7,300
+284,Female,5-19,Unknown,Call closed,18,31
+285,Female,5-19,Collapse,Seen by A&E doctor,18,29
+286,Female,5-19,Central Nervous System conditions,Call closed,11,131
+287,Male,65+,Central Nervous System conditions,MIU,6,184
+288,Male,5-19,Unknown,Discharged,16,143
+289,Male,65+,Central Nervous System conditions,Admitted,9,13
+290,Male,0-4,Collapse,Emergency Dentist,6,104
+291,Male,0-4,Falls,WIC,21,250
+292,Male,5-19,Falls,Call closed,19,109
+293,Male,0-4,Falls,Admitted,12,253
+294,Female,65+,Falls,Call closed,18,207
+295,Female,0-4,Dislocation/fracture/joint injury/amputation,Emergency Dentist,9,109
+296,Male,20-64,Falls,Out-patient clinic,2,192
+297,Female,20-64,Dislocation/fracture/joint injury/amputation,OOH,6,72
+298,Female,65+,Central Nervous System conditions,Spoke to a primary care service,8,174
+299,Male,5-19,Unknown,Spoke to a primary care service,3,265
+300,Female,20-64,Unknown,Out-patient clinic,9,288
+301,Female,65+,Dislocation/fracture/joint injury/amputation,OOH,7,170
+302,Female,0-4,Collapse,Emergency Dentist,3,75
+303,Male,5-19,Falls,Out-patient clinic,17,94
+304,Male,20-64,Dislocation/fracture/joint injury/amputation,Out-patient clinic,11,106
+305,Male,65+,Falls,Seen by A&E doctor,4,31
+306,Female,0-4,Collapse,Emergency Dentist,0,108
+307,Female,0-4,Gastrointestinal conditions,Not picked up by an ambulance,9,13
+308,Female,65+,Gastrointestinal conditions,Out-patient clinic,18,116
+309,Female,20-64,Falls,Call closed,3,172
+310,Male,65+,Collapse,Emergency Dentist,10,311
+311,Male,5-19,Cardiac conditions,Out-patient clinic,14,229
+312,Female,20-64,Cardiac conditions,Out-patient clinic,5,133
+313,Female,5-19,Gastrointestinal conditions,OOH,16,61
+314,Female,20-64,Respiratory conditions,Seen by A&E doctor,2,43
+315,Female,65+,Unknown,MIU,16,122
+316,Male,65+,Collapse,OOH,20,22
+317,Female,0-4,Central Nervous System conditions,OOH,19,116
+318,Female,0-4,Gastrointestinal conditions,MIU,6,49
+319,Female,5-19,Falls,Spoke to a primary care service,20,128
+320,Female,65+,Cardiac conditions,Spoke to a primary care service,18,66
+321,Female,20-64,Collapse,OOH,4,139
+322,Male,0-4,Gastrointestinal conditions,Emergency Dentist,3,110
+323,Female,65+,Dislocation/fracture/joint injury/amputation,Admitted,11,70
+324,Male,20-64,Respiratory conditions,Spoke to a primary care service,0,290
+325,Male,5-19,Unknown,Not picked up by an ambulance,20,288
+326,Male,20-64,Gastrointestinal conditions,Call closed,13,284
+327,Female,65+,Gastrointestinal conditions,OOH,10,173
+328,Female,20-64,Falls,Not picked up by an ambulance,4,284
+329,Male,0-4,Central Nervous System conditions,Spoke to a primary care service,19,19
+330,Male,5-19,Collapse,Out-patient clinic,7,20
+331,Female,0-4,Collapse,Emergency Dentist,21,41
+332,Female,65+,Gastrointestinal conditions,WIC,1,185
+333,Female,0-4,Respiratory conditions,MIU,2,322
+334,Female,5-19,Central Nervous System conditions,Admitted,3,281
+335,Male,5-19,Dislocation/fracture/joint injury/amputation,WIC,15,233
+336,Male,20-64,Respiratory conditions,Emergency Dentist,11,130
+337,Female,5-19,Central Nervous System conditions,WIC,0,225
+338,Male,5-19,Respiratory conditions,Discharged,18,128
+339,Male,20-64,Gastrointestinal conditions,Out-patient clinic,11,177
+340,Male,5-19,Cardiac conditions,Discharged,3,216
+341,Male,20-64,Dislocation/fracture/joint injury/amputation,Spoke to a primary care service,1,186
+342,Male,5-19,Falls,WIC,5,45
+343,Female,0-4,Dislocation/fracture/joint injury/amputation,Seen by A&E doctor,0,92
+344,Female,65+,Central Nervous System conditions,Not picked up by an ambulance,3,28
+345,Male,0-4,Falls,Admitted,20,100
+346,Female,20-64,Falls,Not picked up by an ambulance,17,172
+347,Male,65+,Dislocation/fracture/joint injury/amputation,Spoke to a primary care service,0,119
+348,Female,65+,Unknown,Seen by A&E doctor,8,111
+349,Male,0-4,Dislocation/fracture/joint injury/amputation,Out-patient clinic,6,163
+350,Female,0-4,Collapse,Discharged,17,254
+351,Female,20-64,Gastrointestinal conditions,Discharged,3,165
+352,Male,65+,Gastrointestinal conditions,Not picked up by an ambulance,19,207
+353,Male,65+,Collapse,MIU,19,4
+354,Female,5-19,Central Nervous System conditions,MIU,8,326
+355,Male,65+,Collapse,Seen by A&E doctor,1,256
+356,Male,0-4,Cardiac conditions,Call closed,1,276
+357,Female,0-4,Central Nervous System conditions,Seen by A&E doctor,13,266
+358,Female,20-64,Unknown,Admitted,12,60
+359,Male,5-19,Central Nervous System conditions,Emergency Dentist,14,259
+360,Female,0-4,Collapse,Not picked up by an ambulance,19,255
+361,Female,20-64,Gastrointestinal conditions,Emergency Dentist,18,169
+362,Female,20-64,Dislocation/fracture/joint injury/amputation,Spoke to a primary care service,5,101
+363,Male,0-4,Cardiac conditions,Admitted,0,7
+364,Male,0-4,Unknown,Out-patient clinic,21,41
+365,Female,5-19,Central Nervous System conditions,Not picked up by an ambulance,14,214
+366,Female,65+,Collapse,WIC,0,285
+367,Male,0-4,Collapse,Seen by A&E doctor,17,333
+368,Male,5-19,Cardiac conditions,WIC,0,240
+369,Male,20-64,Respiratory conditions,Call closed,8,187
+370,Male,0-4,Collapse,Seen by A&E doctor,10,312
+371,Male,20-64,Respiratory conditions,MIU,4,214
+372,Female,5-19,Collapse,Not picked up by an ambulance,12,245
+373,Female,5-19,Falls,Call closed,10,145
+374,Female,20-64,Dislocation/fracture/joint injury/amputation,Admitted,18,269
+375,Female,5-19,Respiratory conditions,Call closed,17,315
+376,Male,0-4,Falls,Seen by A&E doctor,3,79
+377,Female,5-19,Dislocation/fracture/joint injury/amputation,Emergency Dentist,10,302
+378,Male,20-64,Gastrointestinal conditions,WIC,19,216
+379,Male,0-4,Cardiac conditions,Out-patient clinic,21,267
+380,Female,0-4,Central Nervous System conditions,Out-patient clinic,17,262
+381,Male,5-19,Falls,Out-patient clinic,20,323
+382,Female,0-4,Central Nervous System conditions,Discharged,12,63
+383,Female,5-19,Central Nervous System conditions,Seen by A&E doctor,16,124
+384,Female,65+,Unknown,WIC,11,277
+385,Female,20-64,Unknown,Spoke to a primary care service,13,58
+386,Male,65+,Collapse,Seen by A&E doctor,4,117
+387,Male,0-4,Dislocation/fracture/joint injury/amputation,MIU,5,22
+388,Male,65+,Respiratory conditions,Out-patient clinic,11,113
+389,Male,20-64,Central Nervous System conditions,Out-patient clinic,6,23
+390,Male,5-19,Collapse,Admitted,14,50
+391,Female,5-19,Central Nervous System conditions,Call closed,10,42
+392,Female,65+,Gastrointestinal conditions,Spoke to a primary care service,1,145
+393,Male,0-4,Falls,Not picked up by an ambulance,8,229
+394,Male,65+,Collapse,Emergency Dentist,12,261
+395,Male,65+,Unknown,Discharged,8,322
+396,Male,65+,Central Nervous System conditions,MIU,5,127
+397,Male,65+,Gastrointestinal conditions,Out-patient clinic,7,158
+398,Female,20-64,Gastrointestinal conditions,Discharged,11,110
+399,Female,0-4,Respiratory conditions,Call closed,11,327
+400,Male,0-4,Unknown,WIC,10,78
+401,Female,5-19,Unknown,Seen by A&E doctor,19,107
+402,Male,20-64,Unknown,Call closed,2,34
+403,Male,5-19,Dislocation/fracture/joint injury/amputation,Not picked up by an ambulance,9,245
+404,Male,5-19,Gastrointestinal conditions,Spoke to a primary care service,17,221
+405,Female,20-64,Unknown,Seen by A&E doctor,18,149
+406,Male,65+,Central Nervous System conditions,Not picked up by an ambulance,4,110
+407,Male,65+,Cardiac conditions,OOH,8,106
+408,Male,5-19,Collapse,OOH,5,320
+409,Female,65+,Respiratory conditions,Emergency Dentist,8,57
+410,Male,20-64,Respiratory conditions,Spoke to a primary care service,1,289
+411,Male,0-4,Gastrointestinal conditions,WIC,11,230
+412,Female,0-4,Collapse,Emergency Dentist,13,158
+413,Male,20-64,Cardiac conditions,Discharged,17,329
+414,Female,5-19,Central Nervous System conditions,Admitted,6,13
+415,Female,65+,Central Nervous System conditions,Not picked up by an ambulance,5,293
+416,Female,65+,Gastrointestinal conditions,OOH,20,102
+417,Male,0-4,Unknown,Emergency Dentist,14,309
+418,Female,65+,Unknown,Out-patient clinic,1,13
+419,Female,65+,Dislocation/fracture/joint injury/amputation,MIU,4,97
+420,Female,0-4,Collapse,Call closed,6,311
+421,Male,20-64,Respiratory conditions,Admitted,8,12
+422,Female,0-4,Unknown,Call closed,4,36
+423,Female,0-4,Dislocation/fracture/joint injury/amputation,Admitted,0,196
+424,Female,5-19,Gastrointestinal conditions,Call closed,13,270
+425,Male,20-64,Respiratory conditions,Seen by A&E doctor,12,28
+426,Female,0-4,Gastrointestinal conditions,Spoke to a primary care service,4,54
+427,Female,5-19,Respiratory conditions,MIU,7,263
+428,Male,5-19,Central Nervous System conditions,Not picked up by an ambulance,6,116
+429,Male,5-19,Falls,Emergency Dentist,19,229
+430,Female,65+,Unknown,Call closed,20,213
+431,Male,0-4,Respiratory conditions,Discharged,20,70
+432,Male,20-64,Cardiac conditions,Admitted,19,20
+433,Female,5-19,Falls,WIC,9,237
+434,Male,65+,Respiratory conditions,Seen by A&E doctor,10,15
+435,Female,20-64,Falls,Not picked up by an ambulance,20,153
+436,Female,5-19,Respiratory conditions,Seen by A&E doctor,16,173
+437,Female,65+,Dislocation/fracture/joint injury/amputation,WIC,6,277
+438,Female,0-4,Unknown,Not picked up by an ambulance,20,44
+439,Male,65+,Dislocation/fracture/joint injury/amputation,Call closed,17,150
+440,Male,20-64,Cardiac conditions,Not picked up by an ambulance,17,271
+441,Male,20-64,Collapse,Emergency Dentist,20,159
+442,Male,5-19,Gastrointestinal conditions,OOH,7,42
+443,Male,0-4,Gastrointestinal conditions,Call closed,20,301
+444,Female,0-4,Gastrointestinal conditions,Spoke to a primary care service,4,48
+445,Male,5-19,Cardiac conditions,Out-patient clinic,15,85
+446,Male,0-4,Unknown,Out-patient clinic,10,53
+447,Female,65+,Respiratory conditions,MIU,21,33
+448,Male,5-19,Falls,Out-patient clinic,4,15
+449,Male,0-4,Unknown,Seen by A&E doctor,6,49
+450,Female,5-19,Cardiac conditions,MIU,16,222
+451,Female,5-19,Respiratory conditions,Discharged,6,16
+452,Male,5-19,Unknown,MIU,1,281
+453,Male,65+,Falls,Call closed,13,309
+454,Male,65+,Dislocation/fracture/joint injury/amputation,Admitted,15,280
+455,Male,0-4,Respiratory conditions,Discharged,19,11
+456,Male,65+,Dislocation/fracture/joint injury/amputation,OOH,13,84
+457,Male,65+,Falls,MIU,20,326
+458,Female,65+,Unknown,Out-patient clinic,3,132
+459,Female,65+,Respiratory conditions,Call closed,1,296
+460,Female,0-4,Unknown,Seen by A&E doctor,17,29
+461,Female,20-64,Central Nervous System conditions,WIC,1,39
+462,Female,20-64,Respiratory conditions,Out-patient clinic,21,214
+463,Male,0-4,Cardiac conditions,Not picked up by an ambulance,0,311
+464,Female,20-64,Dislocation/fracture/joint injury/amputation,Emergency Dentist,21,262
+465,Female,0-4,Dislocation/fracture/joint injury/amputation,MIU,4,63
+466,Male,5-19,Collapse,WIC,16,93
+467,Female,65+,Central Nervous System conditions,Not picked up by an ambulance,17,86
+468,Female,65+,Unknown,MIU,21,290
+469,Male,20-64,Cardiac conditions,Spoke to a primary care service,14,239
+470,Male,0-4,Central Nervous System conditions,Out-patient clinic,15,58
+471,Male,5-19,Falls,Not picked up by an ambulance,11,322
+472,Male,0-4,Dislocation/fracture/joint injury/amputation,Call closed,7,32
+473,Female,0-4,Falls,Spoke to a primary care service,8,243
+474,Male,0-4,Collapse,Seen by A&E doctor,17,169
+475,Female,20-64,Falls,Not picked up by an ambulance,16,192
+476,Male,5-19,Falls,Discharged,16,228
+477,Male,65+,Falls,WIC,2,63
+478,Male,20-64,Collapse,Out-patient clinic,2,129
+479,Male,20-64,Unknown,OOH,17,206
+480,Male,20-64,Falls,Admitted,13,177
+481,Male,20-64,Respiratory conditions,Spoke to a primary care service,9,103
+482,Male,5-19,Cardiac conditions,Call closed,17,311
+483,Male,20-64,Unknown,Emergency Dentist,19,8
+484,Female,0-4,Unknown,OOH,11,137
+485,Male,20-64,Central Nervous System conditions,Admitted,9,76
+486,Male,0-4,Dislocation/fracture/joint injury/amputation,Out-patient clinic,6,13
+487,Female,20-64,Collapse,Seen by A&E doctor,5,98
+488,Male,65+,Cardiac conditions,Not picked up by an ambulance,7,155
+489,Male,5-19,Respiratory conditions,Call closed,10,263
+490,Male,5-19,Collapse,Admitted,18,175
+491,Male,20-64,Collapse,Call closed,14,87
+492,Female,65+,Dislocation/fracture/joint injury/amputation,Call closed,13,55
+493,Female,65+,Unknown,Admitted,13,270
+494,Male,5-19,Cardiac conditions,OOH,20,112
+495,Female,5-19,Cardiac conditions,Seen by A&E doctor,15,38
+496,Female,0-4,Central Nervous System conditions,Spoke to a primary care service,2,76
+497,Male,65+,Falls,Out-patient clinic,3,179
+498,Female,20-64,Unknown,OOH,17,219
+499,Male,0-4,Collapse,Spoke to a primary care service,20,148
